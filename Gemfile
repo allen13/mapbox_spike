@@ -39,3 +39,38 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'bootstrap-sass'
+gem 'devise'
+gem 'haml-rails'
+gem 'puma'
+gem 'pundit'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :mri_21, :rbx]
+  gem 'guard-bundler'
+  gem 'guard-rails'
+  gem 'guard-rspec'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
+  gem 'rb-fchange', :require=>false
+  gem 'rb-fsevent', :require=>false
+  gem 'rb-inotify', :require=>false
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'database_cleaner', '1.0.1'
+  gem 'email_spec'
+  gem 'turnip', '>= 1.1.0'
+end
+
